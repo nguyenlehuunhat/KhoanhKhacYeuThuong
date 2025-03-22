@@ -1,0 +1,97 @@
+/* Font & Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center fixed; /* Đặt ảnh nền */
+    background-size: cover; /* Cho ảnh phủ toàn bộ màn hình */
+    color: #333; /* Màu chữ dễ đọc */
+    line-height: 1.6;
+}
+
+/* Lớp phủ nền làm mờ */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Lớp phủ màu trắng với độ trong suốt */
+    z-index: -1; /* Đặt lớp phủ dưới nội dung */
+    backdrop-filter: blur(5px); /* Hiệu ứng làm mờ ảnh nền */
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Giảm padding để làm nhỏ phần header */
+}
+
+.main-header h1 {
+    font-size: 1.6rem; /* Kích thước nhỏ gọn */
+    font-weight: 600; /* Đậm hơn để tạo điểm nhấn */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Bóng nhẹ */
+}
+
+.main-header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Album Section */
+.albums-section {
+    padding: 30px;
+    text-align: center;
+}
+
+.albums-section h2 {
+    font-size: 1.8rem; /* Làm nhỏ tiêu đề album */
+    margin-bottom: 20px;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.album-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+}
+
+.album-card h3 {
+    padding: 10px;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
